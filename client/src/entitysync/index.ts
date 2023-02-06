@@ -12,7 +12,7 @@ entitySyncFactory.registerEndpoint( EndpointType.Marker, new EntitySyncMarkerEnd
 entitySyncFactory.registerEndpoint( EndpointType.TextLabel, new EntitySyncTextLabelEndpoint() );
 entitySyncFactory.registerEndpoint( EndpointType.DynamicObject, new EntitySyncObjectEndpoint() );
 entitySyncFactory.registerEndpoint( EndpointType.WorldObject, new EntitySyncWorldObjectEndpoint() );
-entitySyncFactory.registerEndpoint(EndpointType.Ped, new EntitySyncPedEndpoint() );
+entitySyncFactory.registerEndpoint(EndpointType.StaticPed, new EntitySyncPedEndpoint() );
 
 // when an object is streamed in
 alt.onServer( "entitySync:create", ( entityId: number, entityType: number, position: alt.Vector3, currEntityData: any ) => {

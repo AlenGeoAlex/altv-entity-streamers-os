@@ -3,5 +3,5 @@ export enum EndpointType {
     TextLabel,
     DynamicObject,
     WorldObject,
-    Ped
+    StaticPed
 }
