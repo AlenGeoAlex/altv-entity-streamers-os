@@ -5,12 +5,14 @@ import { EntitySyncMarkerEndpoint } from "./endpoints/markers";
 import { EntitySyncTextLabelEndpoint } from "./endpoints/textlabels";
 import { EntitySyncObjectEndpoint } from "./endpoints/objects";
 import { EntitySyncWorldObjectEndpoint } from "./endpoints/world-objects";
+import {EntitySyncPedEndpoint} from "./endpoints/peds/static";
 
 const entitySyncFactory = new EntitySyncFactory();
 entitySyncFactory.registerEndpoint( EndpointType.Marker, new EntitySyncMarkerEndpoint() );
 entitySyncFactory.registerEndpoint( EndpointType.TextLabel, new EntitySyncTextLabelEndpoint() );
 entitySyncFactory.registerEndpoint( EndpointType.DynamicObject, new EntitySyncObjectEndpoint() );
 entitySyncFactory.registerEndpoint( EndpointType.WorldObject, new EntitySyncWorldObjectEndpoint() );
+entitySyncFactory.registerEndpoint(EndpointType.Ped, new EntitySyncPedEndpoint() );
 
 // when an object is streamed in
 alt.onServer( "entitySync:create", ( entityId: number, entityType: number, position: alt.Vector3, currEntityData: any ) => {

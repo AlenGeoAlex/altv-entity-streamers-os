@@ -2,5 +2,6 @@ export enum EndpointType {
     Marker,
     TextLabel,
     DynamicObject,
-    WorldObject
+    WorldObject,
+    Ped
 }
